@@ -12,13 +12,13 @@ library(tidyverse)
 input_data = "data.txt"
 outdir = "./out/"
 python_loc = "/opt/anaconda3/bin/python" # depends on your enviroment
-se_loc = "./functions/" # available at https://github.com/stasaki/clei2block/functions/
+se_loc = "./functions/" # available at https://github.com/stasaki/SCORPIUS/tree/main/functions/
 dir.create(outdir,recursive = T)
 
 # SpectralEmbedding ####
 n_pc=40
 k=10
-cmd = paste0(python_loc," code/functions/SpectralEmbedding.py ",
+cmd = paste0(python_loc," ",se_loc,"SpectralEmbedding.py ",
              input_data," ",outdir," ",k," ",n_pc)
 
 # SCORPIUS ####
